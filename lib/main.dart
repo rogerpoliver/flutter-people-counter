@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
       _people += delta;
 
       if (_people >= 10) {
-        _infoText = "Não há mesas disponíveis";
+        _infoText = "Lotado";
       } else {
         _infoText = "Há mesas disponíveis";
       }
@@ -44,10 +44,11 @@ class _HomeState extends State<Home> {
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              "Clientes: $_people",
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+            Text("Clientes: $_people",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    backgroundColor: Colors.black54)),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -56,7 +57,7 @@ class _HomeState extends State<Home> {
                   child: FlatButton(
                     child: Text(
                       "+1",
-                      style: TextStyle(color: Colors.white, fontSize: 40),
+                      style: TextStyle(color: Colors.white, fontSize: 40, backgroundColor: Colors.black54),
                     ),
                     onPressed: () {
                       _changePeople(1);
@@ -68,7 +69,7 @@ class _HomeState extends State<Home> {
                   child: FlatButton(
                     child: Text(
                       "-1",
-                      style: TextStyle(color: Colors.white, fontSize: 40),
+                      style: TextStyle(color: Colors.white, fontSize: 40, backgroundColor: Colors.black54),
                     ),
                     onPressed: () {
                       _changePeople(-1);
@@ -81,7 +82,8 @@ class _HomeState extends State<Home> {
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
-                    fontSize: 30.0)),
+                    fontSize: 30.0,
+                    backgroundColor: Colors.black54)),
           ],
         )
       ],
