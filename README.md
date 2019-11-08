@@ -1,6 +1,6 @@
 # People counter
 
-Este é meu primeiro app mobile e primeira aplicação Flutter.
+This is my first Flutter app and fist time developing a mobile application.
 
 ## Demonstração
 
